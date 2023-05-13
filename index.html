@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Joseluis</h1>
+    <script>
+        alert('Sumador de números');
+        let number1 = prompt('Ingrese numero 1:');
+        let number2 = prompt('Ingrese numero 2:');
+        alert('Que operación le gustaria hacer');
+        let response = prompt('1 (suma), 2 (resta), 3 (multiplicación), 4 (división)');
+        if(response=='4' && number2=='0'){
+            alert('NO SE PUEDE DIVIDIR ENTRE CERO')
+        }else if (response == '1'){
+            alert(+number1 + +number2)
+        }else if (+response == '2'){
+            alert(+number1 - +number2)
+        }else if (response == '3'){
+            alert(+number1 * +number2)
+        }else if (response == '4'){
+            alert(+number1/+number2);
+        }
+    </script>
+    <h2><script></script></h2>
+</body>
+</html>
