@@ -8,22 +8,40 @@
 <body>
     <h1>Joseluis Muñoz</h1>
     <script>
-        alert('Sumador de números');
-        let number1 = prompt('Ingrese numero 1:');
-        let number2 = prompt('Ingrese numero 2:');
-        alert('Que operación le gustaria hacer');
-        let response = prompt('1 (suma), 2 (resta), 3 (multiplicación), 4 (división)');
-        if(response=='4' && number2=='0'){
-            alert('NO SE PUEDE DIVIDIR ENTRE CERO')
-        }else if (response == '1'){
-            alert(+number1 + +number2)
-        }else if (+response == '2'){
-            alert(+number1 - +number2)
-        }else if (response == '3'){
-            alert(+number1 * +number2)
-        }else if (response == '4'){
-            alert(+number1/+number2);
-        }
+        // ---- INICIO CALCULADORA ---
+        // alert('Sumador de números');
+        // let number1 = prompt('Ingrese numero 1:');
+        // let number2 = prompt('Ingrese numero 2:');
+        // alert('Que operación le gustaria hacer');
+        // let response = prompt('1 (suma), 2 (resta), 3 (multiplicación), 4 (división)');
+        // if(response=='4' && number2=='0'){
+        //     alert('NO SE PUEDE DIVIDIR ENTRE CERO')
+        // }else if (response == '1'){
+        //     alert(+number1 + +number2)
+        // }else if (+response == '2'){
+        //     alert(+number1 - +number2)
+        // }else if (response == '3'){
+        //     alert(+number1 * +number2)
+        // }else if (response == '4'){
+        //     alert(+number1/+number2);
+        // }
+        // ---- FIN DE CALCULADORA --
+
+        // ---- GENERADOR DE VOUCHERS ---
+        alert('Ingresa su numero de identificacion');
+        let nombre = prompt('Ingresar Nombre');
+        let dni = prompt('Ingresar DNI');
+        let monto1 = (Math.random(0, 100)*123).toFixed(2);
+        let igv = (+monto1*18/100).toFixed(2);
+        let monto2 = (+monto1 + +igv).toFixed(2);
+        alert(`
+            Nombre    : ${nombre}
+            DNI       : ${dni}            
+            Fecha     : ${new Date()}
+            Monto Neto: ${monto1}
+            IGV (18%) : ${igv}
+            Boleta    : ${monto2}
+        `);
     </script>
     <h2><script></script></h2>
 </body>
